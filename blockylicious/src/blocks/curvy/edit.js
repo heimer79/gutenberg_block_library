@@ -27,12 +27,12 @@ import './editor.scss';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  *
- * @return {Element} Element to render.
+ * @return {WPElement} Element to render.
  */
 export default function Edit() {
 	return (
 		<p { ...useBlockProps() }>
-			{ __( 'Curvy – hello from the editor!', 'curvy' ) }
+			{ __( 'Blocklicious – hello from the editor!', 'blocklicious' ) }
 		</p>
 	);
 }

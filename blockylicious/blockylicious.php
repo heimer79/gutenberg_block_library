@@ -1,21 +1,19 @@
 <?php
+
 /**
- * Plugin Name:       Curvy
- * Description:       Example block scaffolded with Create Block tool.
- * Requires at least: 6.1
+ * Plugin Name:       Blockylicious
+ * Description:       A plugin of funky blocks
+ * Requires at least: 5.9
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            The WordPress Contributors
+ * Author:            Heimer 
+ * Author URI:        https://github.com/heimer79
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       curvy
+ * Text Domain:       blockylicious
  *
- * @package CreateBlock
+ * @package           create-block
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -24,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_curvy_block_init() {
-	register_block_type( __DIR__ . '/build' );
+function create_block_blockylicious_block_init() {
+	register_block_type(__DIR__ . '/build/blocks/curvy');
 }
-add_action( 'init', 'create_block_curvy_block_init' );
+add_action('init', 'create_block_blockylicious_block_init');
