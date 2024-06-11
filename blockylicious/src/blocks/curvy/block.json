@@ -1,16 +1,16 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "create-block/blocklicious",
+	"name": "blockylicious/curvy",
 	"version": "0.1.0",
-	"title": "Blocklicious",
+	"title": "Curvy",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Curvy shape dividers to make dividing page content more interesting.",
 	"supports": {
 		"html": false
 	},
-	"textdomain": "blocklicious",
+	"textdomain": "blockylicious",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"
