@@ -13,6 +13,9 @@ import { __ } from '@wordpress/i18n';
  */
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 
+import { PanelBody, ToggleControl } from '@wordpress/components';
+
+
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -29,14 +32,26 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
+
+import metadata from './block.json';
+
 export default function Edit() {
 	return (
 		<>
 			<p { ...useBlockProps() }>
-				{ __( 'Blocklicious – hello from the editor!', 'blocklicious' ) }
+				{ __( 'Blocklicious – hello from the editor!', metadata.textdomain ) }
 			</p>
 			<InspectorControls>
-				test messages
+				<PanelBody title={ __( "Top curve", metadata.textdomain ) } >
+
+					<div style={ { display: "flex" } }>
+						<ToggleControl />
+						<span>
+							{ __( "Enable top curve", metadata.textdomain ) }
+						</span>
+					</div>
+
+				</PanelBody>
 			</InspectorControls>   
 		</>
 	);
