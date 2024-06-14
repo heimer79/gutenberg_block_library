@@ -34,15 +34,21 @@ import './editor.scss';
  */
 
 import metadata from './block.json';
+import { Curve } from './components/curve';
 
 export default function Edit ( props )
 {
 	console.log( props );
+	const { className, ...blockProps } = useBlockProps();
 	return (
 		<>
-			<p { ...useBlockProps() }>
+			<section className={ `${ className } alignfull` } { ...blockProps } >
+				{ props.attributes.enableTopCurve &&
+					< Curve /> }
+			</section>
+			{/* <p { ...useBlockProps() }>
 				{ __( 'Blocklicious – hello from the editor!', metadata.textdomain ) }
-			</p>
+			</p> */}
 			<InspectorControls>
 				<PanelBody title={ __( "Top curve", metadata.textdomain ) } >
 
