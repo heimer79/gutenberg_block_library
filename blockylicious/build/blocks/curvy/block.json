@@ -8,7 +8,12 @@
   "icon": "smiley",
   "description": "Curvy shape dividers to make dividing page content more interesting.",
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "background": true,
+      "link": false,
+      "text": false
+    }
   },
   "attributes": {
     "enableTopCurve": {
