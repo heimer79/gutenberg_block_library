@@ -83,14 +83,23 @@ __webpack_require__.r(__webpack_exports__);
  * @return {WPElement} Element to render.
  */
 
+// Import metadata from the block.json file
+
+// Import the Curve component from the components folder
 
 
+// Define the Edit function component, which receives props as an argument
 function Edit(props) {
+  // Log the props object to the console for debugging purposes
   console.log(props);
+
+  // Destructure the className from useBlockProps() and store the rest in blockProps
   const {
     className,
     ...blockProps
   } = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
+
+  // Log the className to the console for debugging
   console.log(className);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: `${className} alignfull`,
@@ -103,6 +112,7 @@ function Edit(props) {
     }
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
     onChange: isChecked => {
+      // Update the enableTopCurve attribute when the toggle is changed
       props.setAttributes({
         enableTopCurve: isChecked
       });
@@ -287,7 +297,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"blockylicious/curvy","version":"0.1.0","title":"Curvy","category":"widgets","icon":"smiley","description":"Curvy shape dividers to make dividing page content more interesting.","supports":{"html":false,"color":{"background":true,"link":false,"text":false}},"attributes":{"enableTopCurve":{"type":"boolean","default":true}},"textdomain":"blockylicious","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"blockylicious/curvy","version":"0.1.0","title":"Curvy","category":"widgets","icon":"smiley","description":"Curvy shape dividers to make dividing page content more interesting.","supports":{"html":false,"color":{"background":true,"link":true,"text":true},"spacing":{"padding":true,"margin":true}},"attributes":{"style":{"type":"object","default":{"color":{"background":"#ec4899","text":"#333"}}},"enableTopCurve":{"type":"boolean","default":true}},"textdomain":"blockylicious","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
